@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Rise FinCorp</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b2b4b",
+                        "accent-gold": "#D4AF37",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Navigation -->
+        <header
+            class="sticky top-0 z-50 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-[#e8edf3] dark:border-slate-800">
+
+            <div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between whitespace-nowrap">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
+                        <svg class="w-6 h-6 text-accent-gold" fill="currentColor" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-primary dark:text-white text-xl font-extrabold tracking-tight">
+                        Rise FinCorp
+                    </h2>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex flex-1 justify-end gap-10">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-primary text-sm font-semibold transition-colors"
+                            href="index.html">Home</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-primary text-sm font-semibold transition-colors"
+                            href="services.html">Loan Products</a>
+                        <a class="text-primary dark:text-accent-gold text-sm font-bold border-b-2 border-primary dark:border-accent-gold py-1"
+                            href="about.html">About Us</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-primary text-sm font-semibold transition-colors"
+                            href="contact.html">Contact</a>
+                    </nav>
+
+                    <a href="tel:+919876543210"
+                        class="hidden lg:flex items-center justify-center rounded-lg bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-primary/90 transition-all">
+                        Interested? Call Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn"
+                    class="md:hidden flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 dark:border-slate-700">
+                    <span class="material-symbols-outlined text-slate-700 dark:text-white">
+                        menu
+                    </span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="hidden md:hidden border-t border-[#e8edf3] dark:border-slate-800 bg-white dark:bg-background-dark">
+                <nav class="flex flex-col gap-5 px-6 py-6">
+                    <a class="text-base font-semibold hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-base font-semibold hover:text-primary transition-colors" href="services.html">Loan
+                        Products</a>
+                    <a class="text-base font-semibold text-primary" href="about.html">About Us</a>
+                    <a class="text-base font-semibold hover:text-primary transition-colors"
+                        href="contact.html">Contact</a>
+
+                    <a href="tel:+919876543210"
+                        class="mt-4 flex items-center justify-center rounded-lg bg-primary h-11 text-sm font-bold text-white">
+                        Call Us
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Mobile Menu Script -->
+        <script>
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        </script>
+
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="relative h-[550px] w-full flex items-center justify-center overflow-hidden">
+                <div class="absolute inset-0 bg-primary/40 z-10"></div>
+                <div class="absolute inset-0 bg-cover bg-center"
+                    data-alt="Professional modern corporate office interior with glass walls"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1SLfKl_iVL36Guv3v6WP27hKvZIryGI7czUF0_SvMg_RNVIB-vHk7bn_qdunz_qh40z_uUiI62zcC8FncAj53LlboWp7yXWD9-KWyT_St0pRvhgCboeOxk-tWA56vTpe6p9wN3-284pZa25kOORrjsbXWHTLiCqOiVBXDByA-pjxzofdqPIAZSS2cNOGUU5yTPnCCmugfh8l8R3Iqqwc9NUZtSgcQfmo8tt67LgcWMzsErWQf0bQEJBdG8GOQWfk67ELX6sQGXw')">
+                </div>
+                <div class="relative z-20 max-w-[960px] text-center px-6">
+                    <span
+                        class="inline-block px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-widest text-white bg-accent-gold/90 rounded-full">Established
+                        2020</span>
+                    <h1 class="text-white text-5xl md:text-7xl font-black leading-tight tracking-[-0.033em] mb-6">
+                        Empowering Your Dreams
+                    </h1>
+                    <p class="text-white/90 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
+                        Personalized financial solutions tailored to help you achieve your goals with expert guidance
+                        and unwavering integrity.
+                    </p>
+                    <!-- <div class="mt-10 flex flex-wrap justify-center gap-4">
+                        <button
+                            class="min-w-[180px] h-14 rounded-lg bg-accent-gold text-primary font-bold text-lg hover:scale-105 transition-transform shadow-xl">Our
+                            History</button>
+                        <button
+                            class="min-w-[180px] h-14 rounded-lg bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold text-lg hover:bg-white/20 transition-all">Work
+                            With Us</button>
+                    </div> -->
+                </div>
+            </section>
+            <!-- Company Overview -->
+            <section class="py-24 bg-white dark:bg-background-dark">
+                <div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-accent-gold/10 rounded-full blur-2xl"></div>
+                        <h2 class="text-primary dark:text-accent-gold text-sm font-bold uppercase tracking-widest mb-4">
+                            Our Legacy</h2>
+                        <h3 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight mb-8">
+                            Bridging the gap between financial institutions and individuals.
+                        </h3>
+                        <div class="space-y-6 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            <p>
+                                Rise FinCorp was founded with a single mission: to provide transparent, accessible, and
+                                expert financial consultancy. With over 6 years of experience in the loan industry, we
+                                have established ourselves as a pillar of reliability in the financial sector.
+                            </p>
+                            <p>
+                                We understand that every dream requires financial backing. Whether it's a first home, a
+                                business expansion, or personal milestones, we ensure our clients receive the best
+                                possible terms and support throughout their financial journey.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-accent-gold rounded-2xl rotate-3 group-hover:rotate-1 transition-transform">
+                        </div>
+                        <img alt="Financial consultants discussing strategy in a conference room"
+                            class="relative rounded-2xl shadow-2xl transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2 object-cover aspect-[4/3]"
+                            data-alt="Financial consultants discussing strategy in a conference room"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeCFFPgoHN-8DPYxicOxhLZwaYXTiqCIGpbZ-NdRANm6b4mjLor7sixAgaU7oZtNMLJ29GKwVhwYGKylDOP8hTjirfNUAzuux1odkTgVpPxT9ZAE72dwO5otlZvQ1HN5BU2fcwJMDWR-ZZ_2w7PmNy2bA5gHlnV4vqsM1eUpl8Ghnco4QHuGxnCZ4P_1cdyDgHTo9rWwzKLqfyI79I9dECQ77FjEEcQKJIZFDr_x9ZYgSEybFFPqkWDcB8wZ51WDqyqJ4CUK_bDg" />
+                    </div>
+                </div>
+            </section>
+            <!-- Stats Section -->
+            <section class="bg-primary py-16">
+                <div class="max-w-[1200px] mx-auto px-6">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div class="p-6 border-r border-white/10 last:border-0">
+                            <p class="text-4xl font-black text-white mb-2 count" data-target="5">0</p>
+                            <p class="text-accent-gold font-bold uppercase tracking-wider text-xs">Years Experience</p>
+                        </div>
+                        <div class="p-6 border-r border-white/10 last:border-0">
+                            <p class="text-4xl font-black text-white mb-2 count" data-target="2000">0</p>
+                            <p class="text-accent-gold font-bold uppercase tracking-wider text-xs">Happy Clients</p>
+                        </div>
+                        <div class="p-6 border-r border-white/10 last:border-0">
+                            <p class="text-4xl font-black text-white mb-2 count" data-target="150000000">0 </p>
+                            <p class="text-accent-gold font-bold uppercase tracking-wider text-xs">Loan Disbursed</p>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-4xl font-black text-white mb-2 count" data-target="20">0</p>
+                            <p class="text-accent-gold font-bold uppercase tracking-wider text-xs">Bank Partners</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                const counters = document.querySelectorAll('.count');
+
+                const speed = 200; // higher = slower
+
+                const animateCount = (el) => {
+                    const target = +el.getAttribute('data-target');
+                    let count = 0;
+                    const increment = target / speed;
+
+                    const update = () => {
+                        count += increment;
+                        if (count < target) {
+                            el.textContent = Math.ceil(count).toLocaleString();
+                            requestAnimationFrame(update);
+                        } else {
+                            el.textContent = target.toLocaleString();
+                        }
+                    };
+
+                    update();
+                };
+
+                // Animate when section enters viewport
+                const observer = new IntersectionObserver(
+                    (entries, obs) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                const el = entry.target;
+                                animateCount(el);
+                                obs.unobserve(el); // animate only once
+                            }
+                        });
+                    },
+                    { threshold: 0.5 }
+                );
+
+                counters.forEach((counter) => observer.observe(counter));
+            </script>
+            <!-- old details -->
+            <!-- <section class="bg-primary py-16"> <div class="max-w-[1200px] mx-auto px-6"> <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"> <div class="p-6 border-r border-white/10 last:border-0"> <p class="text-4xl font-black text-white mb-2">5+</p> <p class="text-accent-gold font-bold uppercase tracking-wider text-xs">Years Experience</p> </div> <div class="p-6 border-r border-white/10 last:border-0"> <p class="text-4xl font-black text-white mb-2">2k+</p> <p class="text-accent-gold font-bold uppercase tracking-wider text-xs">Happy Clients</p> </div> <div class="p-6 border-r border-white/10 last:border-0"> <p class="text-4xl font-black text-white mb-2">15Cr+</p> <p class="text-accent-gold font-bold uppercase tracking-wider text-xs">Loan Disbursed</p> </div> <div class="p-6"> <p class="text-4xl font-black text-white mb-2">20+</p> <p class="text-accent-gold font-bold uppercase tracking-wider text-xs">Bank Partners</p> </div> </div> </div> </section> -->
+            <!-- Mission & Vision -->
+            <section class="py-24 bg-background-light dark:bg-slate-900/50">
+                <div class="max-w-[1200px] mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-black text-primary dark:text-white mb-4">Values that Drive
+                            Us</h2>
+                        <div class="w-20 h-1.5 bg-accent-gold mx-auto rounded-full"></div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div
+                            class="bg-white dark:bg-background-dark p-10 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex gap-6 group hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="w-16 h-16 shrink-0 bg-primary/5 dark:bg-accent-gold/10 rounded-2xl flex items-center justify-center text-primary dark:text-accent-gold group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined !text-4xl">lightbulb</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-primary dark:text-white mb-4">Our Mission</h4>
+                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    To provide accessible credit and expert financial guidance through innovative
+                                    technology and personal touch, empowering individuals and businesses to grow
+                                    sustainably.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-background-dark p-10 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex gap-6 group hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="w-16 h-16 shrink-0 bg-primary/5 dark:bg-accent-gold/10 rounded-2xl flex items-center justify-center text-primary dark:text-accent-gold group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined !text-4xl">visibility</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-primary dark:text-white mb-4">Our Vision</h4>
+                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    To become the most trusted and preferred financial consultancy nationwide,
+                                    recognized for our integrity, customer-centric approach, and excellence in financial
+                                    planning.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Leadership Team -->
+            <!-- <section class="py-24 bg-white dark:bg-background-dark">
+                <div class="max-w-[1200px] mx-auto px-6">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+                        <div>
+                            <h2 class="text-accent-gold font-bold uppercase tracking-widest text-sm mb-4">Leadership
+                            </h2>
+                            <h3 class="text-4xl font-black text-primary dark:text-white">The Minds Behind Rise FinCorp
+                            </h3>
+                        </div>
+                        <p class="text-slate-500 max-w-sm">Guided by veterans with decades of collective experience in
+                            global finance and banking sectors.</p>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"> -->
+            <!-- Leader 1 -->
+            <!-- <div class="group">
+                            <div
+                                class="relative overflow-hidden rounded-2xl mb-6 grayscale hover:grayscale-0 transition-all duration-500">
+                                <img alt="Founder Portrait"
+                                    class="aspect-[4/5] object-cover w-full scale-110 group-hover:scale-100 transition-transform duration-500"
+                                    data-alt="Portrait of a professional businessman in a navy suit"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqK-dyLgy-ALdcmqPEXKfcZZcVA-UhneulL0fv9DR9xfoUhqAJZIHE_QNFl8zITT6sMa2LahWyiEF3-QFbwJn1_u9_tgVdkRK-zCA5Jjfnv5vsn-fxPahXyZfziFh7DsnACkzSiGzs0X4zxVJQ33MMtZq7c9jyLUJ_j96vEoSSosZRABCn9-Va3DFeS8lPzX9Lp1nQAQTGKs6CqkRC7MIX3b03WJbdtiloKiXM9kE3FrXxRuoBMJMXE-g6CqJmeMZkipczes-EsQ" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                </div>
+                            </div>
+                            <h5 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Vikram Malhotra</h5>
+                            <p class="text-accent-gold font-semibold text-sm uppercase tracking-wider mb-4">Founder
+                                &amp; CEO</p>
+                            <div class="flex gap-4">
+                                <span
+                                    class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">link</span>
+                                <span
+                                    class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">mail</span>
+                            </div>
+                        </div> -->
+            <!-- Leader 2 -->
+            <!-- <div class="group">
+                            <div
+                                class="relative overflow-hidden rounded-2xl mb-6 grayscale hover:grayscale-0 transition-all duration-500">
+                                <img alt="COO Portrait"
+                                    class="aspect-[4/5] object-cover w-full scale-110 group-hover:scale-100 transition-transform duration-500"
+                                    data-alt="Portrait of a professional businesswoman in modern corporate attire"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfD_jRcr5LHDdwBUPkbHqTf-3_4tONhpDOlVeCpbf2r_HQ0L7WuijyWJv4ScVoVqvikSXZSAjLiMrzhfu9N86epm7ZVcux5SrDhLTKaQCEcbFUoHEX6-37DQLKMhZrMxhzfZ3opIOLFW9vy8XPXY552Ow-XbEda9-LdkqxY2F1i0pwngiF86H6ivx9k62Qx1aDfVv_t81d8Wh1-lpVsJLYr6ND-f89X3xFIinrnoqOA9IYcboCSBJIbxh9yB4OFakBY7zFpXEA-g" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                </div>
+                            </div>
+                            <h5 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Ananya Sharma</h5>
+                            <p class="text-accent-gold font-semibold text-sm uppercase tracking-wider mb-4">Chief
+                                Operations Officer</p>
+                            <div class="flex gap-4">
+                                <span
+                                    class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">link</span>
+                                <span
+                                    class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">mail</span>
+                            </div>
+                        </div> -->
+            <!-- Leader 3 -->
+            <!-- <div class="group">
+                            <div
+                                class="relative overflow-hidden rounded-2xl mb-6 grayscale hover:grayscale-0 transition-all duration-500">
+                                <img alt="Head of Loans Portrait"
+                                    class="aspect-[4/5] object-cover w-full scale-110 group-hover:scale-100 transition-transform duration-500"
+                                    data-alt="Portrait of a male banking executive smiling"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkA9OBt6DLI8mRgu0M255DDem_ffe-HPBGrO9H8hGSsHmzp3LQO8-om4YDrIyYvgjE-sptYjFdoPjX54pO9rCe4itpR-qDb1iWiYGRzeXfmceWWcehhNrLI7VknG1HMTjPAT2LutnhSwXjdDULVXRf7g1YBk9oqPgptnTWUCCjrh1xZZy6dHl9uJEahy7NP950f090UjsYSmxn8m3gTOzzMnsY-ru84_pUchKrtN4iVDN8lk2Dj4ZX_tPXJoWboZ-AaN_etSLZaQ" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                </div>
+                            </div>
+                            <h5 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Rajesh Iyer</h5>
+                            <p class="text-accent-gold font-semibold text-sm uppercase tracking-wider mb-4">Head of Loan
+                                Disbursements</p>
+                            <div class="flex gap-4">
+                                <span
+                                    class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">link</span>
+                                <span
+                                    class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">mail</span>
+                            </div>
+                        </div> -->
+            <!-- </div>
+                </div>
+            </section> -->
+            <!-- CTA Section -->
+            <section class="py-20 bg-background-light dark:bg-slate-900">
+                <div class="max-w-[1000px] mx-auto px-6">
+                    <div class="bg-primary rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-accent-gold/10 rounded-full -mr-32 -mt-32">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-24 -mb-24"></div>
+                        <h2 class="relative z-10 text-3xl md:text-5xl font-black text-white mb-6">Ready to scale your
+                            dreams?</h2>
+                        <p class="relative z-10 text-white/70 text-lg mb-10 max-w-2xl mx-auto">Get in touch with our
+                            expert consultants today and discover the perfect financial roadmap for your journey.</p>
+                        <a href="https://wa.me/919896412956?text=Hi%20Rise%20FinCorp,%20I%20am%20interested%20in%20consulting%20with%20an%20expert.%20Please%20guide%20me."
+                            target="_blank"
+                            class="relative z-10 bg-accent-gold text-primary hover:bg-white transition-colors h-14 px-10 rounded-xl font-bold text-lg shadow-2xl inline-flex items-center justify-center">
+                            Consult an Expert Now
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-primary pt-20 pb-10 border-t border-white/5">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <div class="grid md:grid-cols-4 gap-12 mb-16">
+                    <div class="col-span-2">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-8 h-8 bg-accent-gold flex items-center justify-center rounded">
+                                <svg class="w-5 h-5 text-primary" fill="currentColor" viewbox="0 0 48 48">
+                                    <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h2 class="text-white text-xl font-extrabold">Rise FinCorp</h2>
+                        </div>
+                        <p class="text-white/60 max-w-sm leading-relaxed mb-8">
+                            Your trusted partner in financial growth. We provide transparent solutions for personal,
+                            business, and home loans with the best market rates.
+                        </p>
+                        <div class="flex gap-4">
+                            <!-- <div
+                                class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-accent-gold hover:text-primary transition-all cursor-pointer">
+                                <span class="material-symbols-outlined">public</span>
+                            </div> -->
+                            <!-- Phone Icon -->
+                            <a href="tel:+919876543210"
+                                class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-accent-gold hover:text-primary transition-all cursor-pointer">
+                                <span class="material-symbols-outlined">phone</span>
+                            </a>
+
+                            <!-- Email Icon -->
+                            <a href="mailto:rsingh.office01@gmail.com"
+                                class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/40 hover:bg-accent-gold hover:text-primary transition-all cursor-pointer">
+                                <span class="material-symbols-outlined">alternate_email</span>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-accent-gold transition-colors" href="Index.html">Home</a></li>
+                            <li><a class="hover:text-accent-gold transition-colors" href="about.html">About Us</a></li>
+                            <li><a class="hover:text-accent-gold transition-colors" href="services.html">Loan
+                                    Services</a></li>
+                            <li><a class="hover:text-accent-gold transition-colors" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <div>
+                        <h4 class="text-white font-bold mb-6">Support</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-accent-gold transition-colors" href="#">Help Center</a></li>
+                            <li><a class="hover:text-accent-gold transition-colors" href="#">Privacy Policy</a></li>
+                            <li><a class="hover:text-accent-gold transition-colors" href="#">Terms of Service</a></li>
+                            <li><a class="hover:text-accent-gold transition-colors" href="#">FAQs</a></li>
+                        </ul>
+                    </div> -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Loan Options</h4>
+                        <ul class="space-y-4 text-white/60 text-sm">
+                            <li><a class="hover:text-accent transition-colors"
+                                    href="https://wa.me/919896412956?text=Hi%20Rise%20FinCorp,%20I%20am%20interested%20in%20a%20Business%20Loan.%20Please%20share%20more%20details."
+                                    target="_blank">Business Loan</a></li>
+                            <li><a class="hover:text-accent transition-colors"
+                                    href="https://wa.me/919896412956?text=Hi%20Rise%20FinCorp,%20I%20am%20interested%20in%20a%20Personal%20Loan.%20Please%20share%20more%20details."
+                                    target="_blank">Personal Loan</a></li>
+                            <li><a class="hover:text-accent transition-colors"
+                                    href="https://wa.me/919896412956?text=Hi%20Rise%20FinCorp,%20I%20am%20interested%20in%20a%20Loan%20Against%20Property.%20Please%20share%20more%20details."
+                                    target="_blank">Loan Against Property</a></li>
+                            <li><a class="hover:text-accent transition-colors"
+                                    href="https://wa.me/919896412956?text=Hi%20Rise%20FinCorp,%20I%20am%20interested%20in%20a%20Home%20Loan.%20Please%20share%20more%20details."
+                                    target="_blank">Home Loan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="pt-8 border-t border-white/5 text-center text-white/40 text-xs tracking-widest uppercase font-semibold">
+                    © 2024 Rise FinCorp. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
